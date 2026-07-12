@@ -1,432 +1,676 @@
-<!DOCTYPE html><html class="light" lang="en" style="width: 1280px; height: 2316px; overflow: hidden; position: relative;"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{try{
+<!doctype html>
+<html
+  class="light"
+  lang="en"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      try {
         try {
+          try {
             tailwind.config = {
-                darkMode: "class",
-                theme: {
-                    extend: {
-                        "colors": {
-                            "on-tertiary-fixed": "#1b1c1a",
-                            "surface-variant": "#f4f1e9", // Warm light surface
-                            "surface-container-lowest": "#ffffff",
-                            "surface-bright": "#fbf9f4", // Modern Prestige Background
-                            "on-error-container": "#93000a",
-                            "inverse-primary": "#bec6e0",
-                            "tertiary-container": "#1b1c1a",
-                            "on-primary-fixed-variant": "#3f465c",
-                            "error-container": "#ffdad6",
-                            "error": "#ba1a1a",
-                            "tertiary": "#000000",
-                            "on-error": "#ffffff",
-                            "on-background": "#111c2d",
-                            "on-secondary-fixed": "#241a00",
-                            "on-tertiary-container": "#848481",
-                            "on-surface-variant": "#45464d",
-                            "inverse-surface": "#263143",
-                            "outline-variant": "#e2e2e7",
-                            "on-surface": "#111c2d",
-                            "surface-tint": "#565e74",
-                            "surface-dim": "#e8e5df",
-                            "tertiary-fixed": "#e3e2df",
-                            "secondary-fixed-dim": "#e9c349",
-                            "primary-fixed": "#dae2fd",
-                            "surface-container-low": "#f7f5f0",
-                            "secondary-container": "#fed65b",
-                            "on-secondary-fixed-variant": "#574500",
-                            "tertiary-fixed-dim": "#c7c7c3",
-                            "on-tertiary-fixed-variant": "#464744",
-                            "surface-container-highest": "#e5e2db",
-                            "secondary": "#735c00",
-                            "primary": "#0f172a", // Deep Navy
-                            "on-primary": "#ffffff",
-                            "primary-fixed-dim": "#bec6e0",
-                            "surface-container-high": "#efede7",
-                            "on-secondary-container": "#745c00",
-                            "on-tertiary": "#ffffff",
-                            "primary-container": "#fbf9f4", // Sidebar/Background color
-                            "on-secondary": "#ffffff",
-                            "secondary-fixed": "#ffe088",
-                            "outline": "#76777d",
-                            "on-primary-container": "#111c2d",
-                            "surface-container": "#f0ede6",
-                            "background": "#fbf9f4",
-                            "surface": "#fbf9f4",
-                            "inverse-on-surface": "#ecf1ff",
-                            "on-primary-fixed": "#131b2e"
-                        },
-                        "borderRadius": {
-                            "DEFAULT": "0.125rem",
-                            "lg": "0.25rem",
-                            "xl": "0.5rem",
-                            "full": "0.75rem"
-                        },
-                        "spacing": {
-                            "margin-mobile": "20px",
-                            "container-max": "1280px",
-                            "base": "8px",
-                            "margin-desktop": "40px",
-                            "gutter": "24px"
-                        },
-                        "fontFamily": {
-                            "display": ["Libre Caslon Text", "serif"],
-                            "body": ["Hanken Grotesk", "sans-serif"]
-                        }
-                    },
+              darkMode: "class",
+              theme: {
+                extend: {
+                  colors: {
+                    "on-tertiary-fixed": "#1b1c1a",
+                    "surface-variant": "#f4f1e9", // Warm light surface
+                    "surface-container-lowest": "#ffffff",
+                    "surface-bright": "#fbf9f4", // Modern Prestige Background
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#bec6e0",
+                    "tertiary-container": "#1b1c1a",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "error-container": "#ffdad6",
+                    error: "#ba1a1a",
+                    tertiary: "#000000",
+                    "on-error": "#ffffff",
+                    "on-background": "#111c2d",
+                    "on-secondary-fixed": "#241a00",
+                    "on-tertiary-container": "#848481",
+                    "on-surface-variant": "#45464d",
+                    "inverse-surface": "#263143",
+                    "outline-variant": "#e2e2e7",
+                    "on-surface": "#111c2d",
+                    "surface-tint": "#565e74",
+                    "surface-dim": "#e8e5df",
+                    "tertiary-fixed": "#e3e2df",
+                    "secondary-fixed-dim": "#e9c349",
+                    "primary-fixed": "#dae2fd",
+                    "surface-container-low": "#f7f5f0",
+                    "secondary-container": "#fed65b",
+                    "on-secondary-fixed-variant": "#574500",
+                    "tertiary-fixed-dim": "#c7c7c3",
+                    "on-tertiary-fixed-variant": "#464744",
+                    "surface-container-highest": "#e5e2db",
+                    secondary: "#735c00",
+                    primary: "#0f172a", // Deep Navy
+                    "on-primary": "#ffffff",
+                    "primary-fixed-dim": "#bec6e0",
+                    "surface-container-high": "#efede7",
+                    "on-secondary-container": "#745c00",
+                    "on-tertiary": "#ffffff",
+                    "primary-container": "#fbf9f4", // Sidebar/Background color
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed": "#ffe088",
+                    outline: "#76777d",
+                    "on-primary-container": "#111c2d",
+                    "surface-container": "#f0ede6",
+                    background: "#fbf9f4",
+                    surface: "#fbf9f4",
+                    "inverse-on-surface": "#ecf1ff",
+                    "on-primary-fixed": "#131b2e",
+                  },
+                  borderRadius: {
+                    DEFAULT: "0.125rem",
+                    lg: "0.25rem",
+                    xl: "0.5rem",
+                    full: "0.75rem",
+                  },
+                  spacing: {
+                    "margin-mobile": "20px",
+                    "container-max": "1280px",
+                    base: "8px",
+                    "margin-desktop": "40px",
+                    gutter: "24px",
+                  },
+                  fontFamily: {
+                    display: ["Libre Caslon Text", "serif"],
+                    body: ["Hanken Grotesk", "sans-serif"],
+                  },
                 },
-            }
+              },
+            };
+          } catch (_e) {}
         } catch (_e) {}
-    }catch(_e){}}catch(_e){}</script></head><body class="bg-surface-bright text-on-surface antialiased">```html
-<meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
-        try {
-            tailwind.config = {
-                darkMode: "class",
-                theme: {
-                    extend: {
-                        "colors": {
-                            "on-tertiary-fixed": "#1b1c1a",
-                            "surface-variant": "#f4f1e9", // Warm light surface
-                            "surface-container-lowest": "#ffffff",
-                            "surface-bright": "#fbf9f4", // Modern Prestige Background
-                            "on-error-container": "#93000a",
-                            "inverse-primary": "#bec6e0",
-                            "tertiary-container": "#1b1c1a",
-                            "on-primary-fixed-variant": "#3f465c",
-                            "error-container": "#ffdad6",
-                            "error": "#ba1a1a",
-                            "tertiary": "#000000",
-                            "on-error": "#ffffff",
-                            "on-background": "#111c2d",
-                            "on-secondary-fixed": "#241a00",
-                            "on-tertiary-container": "#848481",
-                            "on-surface-variant": "#45464d",
-                            "inverse-surface": "#263143",
-                            "outline-variant": "#e2e2e7",
-                            "on-surface": "#111c2d",
-                            "surface-tint": "#565e74",
-                            "surface-dim": "#e8e5df",
-                            "tertiary-fixed": "#e3e2df",
-                            "secondary-fixed-dim": "#e9c349",
-                            "primary-fixed": "#dae2fd",
-                            "surface-container-low": "#f7f5f0",
-                            "secondary-container": "#fed65b",
-                            "on-secondary-fixed-variant": "#574500",
-                            "tertiary-fixed-dim": "#c7c7c3",
-                            "on-tertiary-fixed-variant": "#464744",
-                            "surface-container-highest": "#e5e2db",
-                            "secondary": "#735c00",
-                            "primary": "#0f172a", // Deep Navy
-                            "on-primary": "#ffffff",
-                            "primary-fixed-dim": "#bec6e0",
-                            "surface-container-high": "#efede7",
-                            "on-secondary-container": "#745c00",
-                            "on-tertiary": "#ffffff",
-                            "primary-container": "#fbf9f4", // Sidebar/Background color
-                            "on-secondary": "#ffffff",
-                            "secondary-fixed": "#ffe088",
-                            "outline": "#76777d",
-                            "on-primary-container": "#111c2d",
-                            "surface-container": "#f0ede6",
-                            "background": "#fbf9f4",
-                            "surface": "#fbf9f4",
-                            "inverse-on-surface": "#ecf1ff",
-                            "on-primary-fixed": "#131b2e"
-                        },
-                        "borderRadius": {
-                            "DEFAULT": "0.125rem",
-                            "lg": "0.25rem",
-                            "xl": "0.5rem",
-                            "full": "0.75rem"
-                        },
-                        "spacing": {
-                            "margin-mobile": "20px",
-                            "container-max": "1280px",
-                            "base": "8px",
-                            "margin-desktop": "40px",
-                            "gutter": "24px"
-                        },
-                        "fontFamily": {
-                            "display": ["Libre Caslon Text", "serif"],
-                            "body": ["Hanken Grotesk", "sans-serif"]
-                        }
-                    },
-                },
-            }
-        } catch (_e) {}
-    }catch(_e){}</script>
-<!-- Sidebar Navigation -->
-<aside class="fixed left-0 top-0 h-full w-72 bg-primary-container border-r border-outline-variant flex flex-col py-10 px-8 gap-8 z-50">
-<div class="mb-6">
-<h1 class="font-display text-3xl text-primary tracking-tight leading-none mb-1">&nbsp;CELENTIE</h1>
-<p class="text-[10px] uppercase tracking-[0.2em] text-on-surface-variant/50">Modern Luxury Management</p>
-</div>
-<nav class="flex-1 space-y-1">
-<a class="flex items-center gap-4 px-0 py-3 text-on-surface-variant/60 hover:text-primary transition-all text-[11px] uppercase tracking-widest" href="#">
-<span class="material-symbols-outlined text-[20px]">grid_view</span> Dashboard
-            </a>
-<a class="flex items-center gap-4 px-0 py-3 text-on-surface-variant/60 hover:text-primary transition-all text-[11px] uppercase tracking-widest" href="#">
-<span class="material-symbols-outlined text-[20px]">calendar_month</span> Events
-            </a>
-<a class="flex items-center gap-4 px-0 py-3 text-primary text-[11px] uppercase tracking-widest font-bold" href="#">
-<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: &quot;FILL&quot; 1;">group</span> Guests &amp; Messaging
-            </a>
-<a class="flex items-center gap-4 px-0 py-3 text-on-surface-variant/60 hover:text-primary transition-all text-[11px] uppercase tracking-widest" href="#">
-<span class="material-symbols-outlined text-[20px]">architecture</span> Floor Plan &amp; Seating
-            </a>
-<a class="flex items-center gap-4 px-0 py-3 text-on-surface-variant/60 hover:text-primary transition-all text-[11px] uppercase tracking-widest" href="#">
-<span class="material-symbols-outlined text-[20px]">description</span> Documents
-            </a>
-<a class="flex items-center gap-4 px-0 py-3 text-on-surface-variant/60 hover:text-primary transition-all text-[11px] uppercase tracking-widest" href="#">
-<span class="material-symbols-outlined text-[20px]">payments</span> Budget
-            </a>
-<a class="flex items-center gap-4 px-0 py-3 text-on-surface-variant/60 hover:text-primary transition-all text-[11px] uppercase tracking-widest" href="#">
-<span class="material-symbols-outlined text-[20px]">forum</span> Message Monitor
-            </a>
-<a class="flex items-center gap-4 px-0 py-3 text-on-surface-variant/60 hover:text-primary transition-all text-[11px] uppercase tracking-widest" href="#">
-<span class="material-symbols-outlined text-[20px]">share</span> Share Access
-            </a>
-</nav>
-<div class="mt-auto pt-8 border-t border-outline-variant space-y-6">
-<button class="w-full bg-primary text-white py-4 rounded-lg font-bold text-[12px] uppercase tracking-widest hover:bg-primary/90 transition-all shadow-sm">
-                New Event
-            </button>
-<div class="space-y-4">
-<a class="flex items-center gap-4 text-on-surface-variant/40 hover:text-primary transition-colors text-[11px] uppercase tracking-widest" href="#">
-<span class="material-symbols-outlined text-[18px]">help</span> Help &amp; FAQ
-                </a>
-<a class="flex items-center gap-4 text-on-surface-variant/40 hover:text-primary transition-colors text-[11px] uppercase tracking-widest" href="#">
-<span class="material-symbols-outlined text-[18px]">settings</span> Settings
-                </a>
-</div>
-</div>
-</aside>
-<!-- Main Content -->
-<main class="ml-72 min-h-screen px-16 py-12">
-<!-- Breadcrumb & Header -->
-<header class="mb-16">
-<div class="flex items-center gap-2 mb-4">
-<span class="text-[10px] uppercase tracking-[0.2em] text-secondary font-bold">Dashboard</span>
-<span class="material-symbols-outlined text-[12px] text-on-surface-variant/30">chevron_right</span>
-<span class="text-[10px] uppercase tracking-[0.2em] text-on-surface-variant/60">Guests &amp; Messaging</span>
-</div>
-<div class="flex items-center justify-between">
-<div>
-<h2 class="font-display text-4xl text-on-surface mb-2">New Event For Shiza</h2>
-<p class="text-on-surface-variant/70 max-w-xl">Configure your guest list and wedding communications to unlock automated guest management.</p>
-</div>
-<div class="flex flex-col items-end">
-<span class="font-display text-3xl text-primary">0</span>
-<span class="text-[10px] uppercase tracking-widest text-on-surface-variant/50">Total Guests</span>
-</div>
-</div>
-</header>
-<!-- Wedding Setup Integrated Progress -->
-<section class="mb-20">
-<div class="flex items-center justify-between mb-8">
-<h3 class="text-[12px] uppercase tracking-[0.15em] text-on-surface font-bold">Step 1: Wedding Setup</h3>
-<div class="flex items-center gap-2 text-on-surface-variant/40">
-<span class="text-xs italic">Complete steps to unlock features</span>
-<span class="material-symbols-outlined text-sm">info</span>
-</div>
-</div>
-<div class="relative bg-surface-container-lowest rounded-xl border border-outline-variant p-8 shadow-sm">
-<div class="absolute top-[52px] left-[10%] right-[10%] h-[1px] bg-outline-variant"></div>
-<div class="grid grid-cols-5 gap-4 relative z-10">
-<!-- Step 1 -->
-<div class="flex flex-col items-center justify-center text-center group">
-<div class="w-10 h-10 rounded-full bg-surface-container-low border-4 border-surface-container-lowest flex items-center justify-center mb-4 transition-all group-hover:bg-secondary/10 group-hover:text-secondary text-primary">
-<span class="material-symbols-outlined text-[18px]">person_add</span>
-</div>
-<span class="text-[10px] uppercase tracking-widest text-on-surface mb-1">Add Guests</span>
-<button class="mt-2 px-3 py-1.5 bg-error/5 border border-error/20 text-error text-[9px] font-bold uppercase tracking-widest rounded-full flex items-center justify-center gap-1.5 hover:bg-error/10 transition-colors mx-auto w-fit min-w-[100px]"><span class="material-symbols-outlined text-[12px]">lock_open</span> Incomplete</button>
-</div>
-<!-- Step 2 -->
-<div class="flex flex-col items-center justify-center text-center">
-<div class="w-10 h-10 rounded-full bg-surface-container-low border-4 border-surface-container-lowest flex items-center justify-center mb-4 text-on-surface-variant/30">
-<span class="material-symbols-outlined text-[18px]">event_note</span>
-</div>
-<span class="text-[10px] uppercase tracking-widest text-on-surface-variant/60 mb-1">Save Date Info</span>
-<button class="mt-2 px-3 py-1.5 bg-surface-container-low border border-outline-variant text-on-surface-variant/60 text-[9px] font-bold uppercase tracking-widest rounded-full flex items-center justify-center gap-1.5 hover:bg-surface-container-high transition-colors mx-auto w-fit min-w-[100px]"><span class="material-symbols-outlined text-[12px]">edit_note</span> Required</button>
-</div>
-<!-- Step 3 -->
-<div class="flex flex-col items-center justify-center text-center">
-<div class="w-10 h-10 rounded-full bg-surface-container-low border-4 border-surface-container-lowest flex items-center justify-center mb-4 text-on-surface-variant/30">
-<span class="material-symbols-outlined text-[18px]">brush</span>
-</div>
-<span class="text-[10px] uppercase tracking-widest text-on-surface-variant/60 mb-1">save CARD DESIGN</span>
-<button class="mt-2 px-3 py-1.5 bg-surface-container-low border border-outline-variant text-on-surface-variant/60 text-[9px] font-bold uppercase tracking-widest rounded-full flex items-center justify-center gap-1.5 hover:bg-surface-container-high transition-colors mx-auto w-fit min-w-[100px]"><span class="material-symbols-outlined text-[12px]">brush</span> Required</button>
-</div>
-<!-- Step 4 -->
-<div class="flex flex-col items-center justify-center text-center">
-<div class="w-10 h-10 rounded-full bg-surface-container-low border-4 border-surface-container-lowest flex items-center justify-center mb-4 text-on-surface-variant/30">
-<span class="material-symbols-outlined text-[18px]">verified_user</span>
-</div>
-<span class="text-[10px] uppercase tracking-widest text-on-surface-variant/60 mb-1">RSVP information</span>
-<button class="mt-2 px-3 py-1.5 bg-surface-container-low border border-outline-variant text-on-surface-variant/60 text-[9px] font-bold uppercase tracking-widest rounded-full flex items-center justify-center gap-1.5 hover:bg-surface-container-high transition-colors mx-auto w-fit min-w-[100px]"><span class="material-symbols-outlined text-[12px]">verified_user</span> Required</button>
-</div>
-<!-- Step 5 -->
-<div class="flex flex-col items-center justify-center text-center">
-<div class="w-10 h-10 rounded-full bg-surface-container-low border-4 border-surface-container-lowest flex items-center justify-center mb-4 text-on-surface-variant/30">
-<span class="material-symbols-outlined text-[18px]">public</span>
-</div>
-<span class="text-[10px] uppercase tracking-widest text-on-surface-variant/60 mb-1">Website</span>
-<button class="mt-2 px-3 py-1.5 bg-surface-container-low border border-outline-variant text-on-surface-variant/60 text-[9px] font-bold uppercase tracking-widest rounded-full flex items-center justify-center gap-1.5 hover:bg-surface-container-high transition-colors mx-auto w-fit min-w-[100px]"><span class="material-symbols-outlined text-[12px]">public</span> Required</button>
-</div>
-</div>
-</div>
-</section>
-<!-- Send Messages-->
-<section>
-<div class="flex items-center justify-between mb-10">
-<h3 class="text-[12px] uppercase tracking-[0.15em] text-on-surface font-bold">Step 2: Messaging Workflow</h3>
-</div>
-<div class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm overflow-hidden">
-<div class="divide-y divide-outline-variant/30">
-<!-- Workflow Item 1: Save the Dates -->
-<div class="workflow-step p-10 flex gap-12 group hover:bg-surface-container-low transition-colors">
-<div class="workflow-dot pt-2">
-<div class="w-4 h-4 rounded-full border-2 border-outline-variant bg-white flex items-center justify-center group-hover:border-primary transition-colors">
-<div class="w-1.5 h-1.5 rounded-full bg-outline-variant group-hover:bg-primary transition-colors"></div>
-</div>
-</div>
-<div class="flex-1 flex flex-col md:flex-row gap-12 items-start">
-<div class="w-full md:w-1/3">
-<div class="flex items-center gap-3 mb-2">
-<h4 class="font-display text-xl text-on-surface opacity-40">01. Save the Dates</h4>
-<span class="material-symbols-outlined text-[16px] text-outline/40">lock</span>
-</div>
-<p class="text-on-surface-variant/60 leading-relaxed text-sm">Send the initial announcement to all guests once your date and design are ready.</p>
-</div>
-<div class="w-full md:w-1/3 space-y-3 pt-1">
-<p class="text-[9px] uppercase tracking-widest text-on-surface-variant/40 mb-1">Requirements</p>
-<div class="flex flex-col gap-2">
-<div class="flex items-center justify-between text-[11px]">
-<span class="text-on-surface-variant/70">Add Guests</span>
-<span class="text-error/70 font-semibold italic">Incomplete</span>
-</div>
-<div class="flex items-center justify-between text-[11px]">
-<span class="text-on-surface-variant/70">Info Config</span>
-<span class="text-on-surface-variant/40 italic">Pending</span>
-</div>
-<div class="flex items-center justify-between text-[11px]">
-<span class="text-on-surface-variant/70">Design Finalized</span>
-<span class="text-on-surface-variant/40 italic">Pending</span>
-</div>
-</div>
-</div>
-<div class="w-full md:w-1/3 flex flex-col gap-3 pt-1">
-<button class="px-6 py-2.5 border border-primary text-[10px] uppercase tracking-widest font-semibold text-primary hover:bg-primary hover:text-white transition-all rounded-lg flex items-center justify-center gap-2 w-full">
-<span class="material-symbols-outlined text-[16px]">visibility</span> Preview
-                                </button>
-<button class="px-8 py-2.5 bg-outline-variant text-on-surface-variant/40 text-[10px] uppercase tracking-widest font-semibold rounded-lg flex items-center justify-center gap-2 transition-all cursor-not-allowed w-full" data-stitch-orig-opacity="0">
-&nbsp;Send Messages</button>
-</div>
-</div>
-</div>
-<!-- Workflow Item 2: RSVP Invitations -->
-<div class="workflow-step p-10 flex gap-12 group hover:bg-surface-container-low transition-colors">
-<div class="workflow-dot pt-2">
-<div class="w-4 h-4 rounded-full border-2 border-outline-variant bg-white flex items-center justify-center">
-<div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div>
-</div>
-</div>
-<div class="flex-1 flex flex-col md:flex-row gap-12 items-start">
-<div class="w-full md:w-1/3">
-<div class="flex items-center gap-3 mb-2">
-<h4 class="font-display text-xl text-on-surface opacity-40">02. RSVP Invitations</h4>
-<span class="material-symbols-outlined text-[16px] text-outline/40">lock</span>
-</div>
-<p class="text-on-surface-variant/60 leading-relaxed text-sm">Official invitations with RSVP links. Unlocks after website and setup details are complete.</p>
-</div>
-<div class="w-full md:w-1/3 space-y-3 pt-1">
-<p class="text-[9px] uppercase tracking-widest text-on-surface-variant/40 mb-1">Requirements</p>
-<div class="flex flex-col gap-2">
-<div class="flex items-center justify-between text-[11px]">
-<span class="text-on-surface-variant/70">Add Guests</span>
-<span class="text-error/70 font-semibold italic">Incomplete</span>
-</div>
-<div class="flex items-center justify-between text-[11px]">
-<span class="text-on-surface-variant/70">RSVP Config</span>
-<span class="text-on-surface-variant/40 italic">Pending</span>
-</div>
-<div class="flex items-center justify-between text-[11px]">
-<span class="text-on-surface-variant/70">Website Live</span>
-<span class="text-on-surface-variant/40 italic">Pending</span>
-</div>
-</div>
-</div>
-<div class="w-full md:w-1/3 flex flex-col gap-3 pt-1">
-<button class="px-6 py-2.5 border border-primary text-[10px] uppercase tracking-widest font-semibold text-primary hover:bg-primary hover:text-white transition-all rounded-lg flex items-center justify-center gap-2 w-full">
-<span class="material-symbols-outlined text-[16px]">visibility</span> Preview
-                                </button>
-<button class="px-8 py-2.5 bg-outline-variant text-on-surface-variant/40 text-[10px] uppercase tracking-widest font-semibold rounded-lg flex items-center justify-center gap-2 transition-all cursor-not-allowed w-full">&nbsp;Send Messages</button>
-</div>
-</div>
-</div>
-<!-- Workflow Item 3: Confirmation -->
-<div class="workflow-step p-10 flex gap-12 group hover:bg-surface-container-low transition-colors">
-<div class="workflow-dot pt-2">
-<div class="w-4 h-4 rounded-full border-2 border-outline-variant bg-white flex items-center justify-center">
-<div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div>
-</div>
-</div>
-<div class="flex-1 flex flex-col md:flex-row gap-12 items-start">
-<div class="w-full md:w-1/3">
-<div class="flex items-center gap-3 mb-2">
-<h4 class="font-display text-xl text-on-surface opacity-40">03. Confirmation</h4>
-<span class="material-symbols-outlined text-[16px] text-outline/40">lock</span>
-</div>
-<p class="text-on-surface-variant/60 leading-relaxed text-sm">Automated messages sent to guests upon successful RSVP submission.</p>
-</div>
-<div class="w-full md:w-1/3 space-y-3 pt-1">
-<p class="text-[9px] uppercase tracking-widest text-on-surface-variant/40 mb-1">Requirements</p>
-<div class="flex flex-col gap-2">
-<div class="flex items-center justify-between text-[11px]">
-<span class="text-on-surface-variant/70">Add Guests</span>
-<span class="text-error/70 font-semibold italic">Incomplete</span>
-</div>
-<div class="flex items-center justify-between text-[11px]">
-<span class="text-on-surface-variant/70">RSVP System Active</span>
-<span class="text-on-surface-variant/40 italic">Pending</span>
-</div>
-</div>
-</div>
-<div class="w-full md:w-1/3 flex flex-col gap-3 pt-1">
-<button class="px-6 py-2.5 border border-primary text-[10px] uppercase tracking-widest font-semibold text-primary hover:bg-primary hover:text-white transition-all rounded-lg flex items-center justify-center gap-2 w-full">
-<span class="material-symbols-outlined text-[16px]">visibility</span> Preview
-                                </button>
-<button class="px-8 py-2.5 bg-outline-variant text-on-surface-variant/40 text-[10px] uppercase tracking-widest font-semibold rounded-lg flex items-center justify-center gap-2 transition-all cursor-not-allowed w-full">&nbsp;Send Messages&nbsp;</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Footer -->
-<section class="mt-24 pt-12 border-t border-outline-variant">
-  <div class="flex items-center justify-between mb-10">
-    <h3 class="text-[12px] uppercase tracking-[0.15em] text-on-surface font-bold">Guest Tracker</h3>
-  </div>
-  <div class="bg-surface-container-lowest rounded-xl border border-outline-variant p-20 flex flex-col items-center justify-center text-center shadow-sm">
-    <div class="w-16 h-16 rounded-full bg-surface-container-low flex items-center justify-center mb-6 text-on-surface-variant/30">
-      <span class="material-symbols-outlined text-[32px]">person</span>
+      } catch (_e) {}
+    </script>
+  </head>
+  <body class="bg-surface-bright text-on-surface antialiased">
+    <!-- Sidebar Navigation -->
+    <aside
+      class="fixed left-0 top-0 h-[100dvh] w-72 bg-primary-container border-r border-outline-variant flex flex-col overflow-y-auto py-10 px-8 gap-8 z-50"
+    >
+      <div class="mb-6">
+        <h1
+          class="font-display text-3xl text-primary tracking-tight leading-none mb-1"
+        >
+          &nbsp;CELENTIE
+        </h1>
+        <p
+          class="text-[10px] uppercase tracking-[0.2em] text-on-surface-variant/50"
+        >
+          Modern Luxury Management
+        </p>
+      </div>
+      <nav class="flex-1 space-y-1">
+        <a
+          class="flex items-center gap-4 px-0 py-3 text-on-surface-variant/60 hover:text-primary transition-all text-[11px] uppercase tracking-widest"
+          href="#"
+        >
+          <span class="material-symbols-outlined text-[20px]">grid_view</span>
+          Dashboard
+        </a>
+        <a
+          class="flex items-center gap-4 px-0 py-3 text-on-surface-variant/60 hover:text-primary transition-all text-[11px] uppercase tracking-widest"
+          href="#"
+        >
+          <span class="material-symbols-outlined text-[20px]"
+            >calendar_month</span
+          >
+          Events
+        </a>
+        <a
+          class="flex items-center gap-4 px-0 py-3 text-primary text-[11px] uppercase tracking-widest font-bold"
+          href="#"
+        >
+          <span
+            class="material-symbols-outlined text-[20px]"
+            style="font-variation-settings: &quot;FILL&quot; 1"
+            >group</span
+          >
+          Guests &amp; Messaging
+        </a>
+        <a
+          class="flex items-center gap-4 px-0 py-3 text-on-surface-variant/60 hover:text-primary transition-all text-[11px] uppercase tracking-widest"
+          href="#"
+        >
+          <span class="material-symbols-outlined text-[20px]"
+            >architecture</span
+          >
+          Floor Plan &amp; Seating
+        </a>
+        <a
+          class="flex items-center gap-4 px-0 py-3 text-on-surface-variant/60 hover:text-primary transition-all text-[11px] uppercase tracking-widest"
+          href="#"
+        >
+          <span class="material-symbols-outlined text-[20px]">description</span>
+          Documents
+        </a>
+        <a
+          class="flex items-center gap-4 px-0 py-3 text-on-surface-variant/60 hover:text-primary transition-all text-[11px] uppercase tracking-widest"
+          href="#"
+        >
+          <span class="material-symbols-outlined text-[20px]">payments</span>
+          Budget
+        </a>
+        <a
+          class="flex items-center gap-4 px-0 py-3 text-on-surface-variant/60 hover:text-primary transition-all text-[11px] uppercase tracking-widest"
+          href="#"
+        >
+          <span class="material-symbols-outlined text-[20px]">forum</span>
+          Message Monitor
+        </a>
+        <a
+          class="flex items-center gap-4 px-0 py-3 text-on-surface-variant/60 hover:text-primary transition-all text-[11px] uppercase tracking-widest"
+          href="#"
+        >
+          <span class="material-symbols-outlined text-[20px]">share</span> Share
+          Access
+        </a>
+      </nav>
+      <div class="mt-auto pt-8 border-t border-outline-variant space-y-6">
+        <button
+          class="w-full bg-primary text-white py-4 rounded-lg font-bold text-[12px] uppercase tracking-widest hover:bg-primary/90 transition-all shadow-sm"
+        >
+          New Event
+        </button>
+        <div class="space-y-4">
+          <a
+            class="flex items-center gap-4 text-on-surface-variant/40 hover:text-primary transition-colors text-[11px] uppercase tracking-widest"
+            href="#"
+          >
+            <span class="material-symbols-outlined text-[18px]">help</span> Help
+            &amp; FAQ
+          </a>
+          <a
+            class="flex items-center gap-4 text-on-surface-variant/40 hover:text-primary transition-colors text-[11px] uppercase tracking-widest"
+            href="#"
+          >
+            <span class="material-symbols-outlined text-[18px]">settings</span>
+            Settings
+          </a>
+        </div>
+      </div>
+    </aside>
+    <!-- Main Content -->
+    <main class="ml-72 min-h-screen px-16 py-12">
+      <!-- Breadcrumb & Header -->
+      <header class="mb-16">
+        <div class="flex items-center gap-2 mb-4">
+          <span
+            class="text-[10px] uppercase tracking-[0.2em] text-secondary font-bold"
+            >Dashboard</span
+          >
+          <span
+            class="material-symbols-outlined text-[12px] text-on-surface-variant/30"
+            >chevron_right</span
+          >
+          <span
+            class="text-[10px] uppercase tracking-[0.2em] text-on-surface-variant/60"
+            >Guests &amp; Messaging</span
+          >
+        </div>
+        <div class="flex items-center justify-between">
+          <div>
+            <h2 class="font-display text-4xl text-on-surface mb-2">
+              New Event For Shiza
+            </h2>
+            <p class="text-on-surface-variant/70 max-w-xl">
+              Configure your guest list and wedding communications to unlock
+              automated guest management.
+            </p>
+          </div>
+          <div class="flex flex-col items-end">
+            <span class="font-display text-3xl text-primary">0</span>
+            <span
+              class="text-[10px] uppercase tracking-widest text-on-surface-variant/50"
+              >Total Guests</span
+            >
+          </div>
+        </div>
+      </header>
+      <!-- Wedding Setup Integrated Progress -->
+      <section class="mb-20">
+        <div class="flex items-center justify-between mb-8">
+          <h3
+            class="text-[12px] uppercase tracking-[0.15em] text-on-surface font-bold"
+          >
+            Step 1: Wedding Setup
+          </h3>
+          <div class="flex items-center gap-2 text-on-surface-variant/40">
+            <span class="text-xs italic"
+              >Complete steps to unlock features</span
+            >
+            <span class="material-symbols-outlined text-sm">info</span>
+          </div>
+        </div>
+        <div
+          class="relative bg-surface-container-lowest rounded-xl border border-outline-variant p-8 shadow-sm"
+        >
+          <div
+            class="absolute top-[52px] left-[10%] right-[10%] h-[1px] bg-outline-variant"
+          ></div>
+          <div class="grid grid-cols-5 gap-4 relative z-10">
+            <!-- Step 1 -->
+            <div
+              class="flex flex-col items-center justify-center text-center group"
+            >
+              <div
+                class="w-10 h-10 rounded-full bg-surface-container-low border-4 border-surface-container-lowest flex items-center justify-center mb-4 transition-all group-hover:bg-secondary/10 group-hover:text-secondary text-primary"
+              >
+                <span class="material-symbols-outlined text-[18px]"
+                  >person_add</span
+                >
+              </div>
+              <span
+                class="text-[10px] uppercase tracking-widest text-on-surface mb-1"
+                >Add Guests</span
+              >
+              <button
+                class="mt-2 px-3 py-1.5 bg-error/5 border border-error/20 text-error text-[9px] font-bold uppercase tracking-widest rounded-full flex items-center justify-center gap-1.5 hover:bg-error/10 transition-colors mx-auto w-fit min-w-[100px]"
+              >
+                <span class="material-symbols-outlined text-[12px]"
+                  >lock_open</span
+                >
+                Incomplete
+              </button>
+            </div>
+            <!-- Step 2 -->
+            <div class="flex flex-col items-center justify-center text-center">
+              <div
+                class="w-10 h-10 rounded-full bg-surface-container-low border-4 border-surface-container-lowest flex items-center justify-center mb-4 text-on-surface-variant/30"
+              >
+                <span class="material-symbols-outlined text-[18px]"
+                  >event_note</span
+                >
+              </div>
+              <span
+                class="text-[10px] uppercase tracking-widest text-on-surface-variant/60 mb-1"
+                >Save Date Info</span
+              >
+              <button
+                class="mt-2 px-3 py-1.5 bg-surface-container-low border border-outline-variant text-on-surface-variant/60 text-[9px] font-bold uppercase tracking-widest rounded-full flex items-center justify-center gap-1.5 hover:bg-surface-container-high transition-colors mx-auto w-fit min-w-[100px]"
+              >
+                <span class="material-symbols-outlined text-[12px]"
+                  >edit_note</span
+                >
+                Required
+              </button>
+            </div>
+            <!-- Step 3 -->
+            <div class="flex flex-col items-center justify-center text-center">
+              <div
+                class="w-10 h-10 rounded-full bg-surface-container-low border-4 border-surface-container-lowest flex items-center justify-center mb-4 text-on-surface-variant/30"
+              >
+                <span class="material-symbols-outlined text-[18px]">brush</span>
+              </div>
+              <span
+                class="text-[10px] uppercase tracking-widest text-on-surface-variant/60 mb-1"
+                >save CARD DESIGN</span
+              >
+              <button
+                class="mt-2 px-3 py-1.5 bg-surface-container-low border border-outline-variant text-on-surface-variant/60 text-[9px] font-bold uppercase tracking-widest rounded-full flex items-center justify-center gap-1.5 hover:bg-surface-container-high transition-colors mx-auto w-fit min-w-[100px]"
+              >
+                <span class="material-symbols-outlined text-[12px]">brush</span>
+                Required
+              </button>
+            </div>
+            <!-- Step 4 -->
+            <div class="flex flex-col items-center justify-center text-center">
+              <div
+                class="w-10 h-10 rounded-full bg-surface-container-low border-4 border-surface-container-lowest flex items-center justify-center mb-4 text-on-surface-variant/30"
+              >
+                <span class="material-symbols-outlined text-[18px]"
+                  >verified_user</span
+                >
+              </div>
+              <span
+                class="text-[10px] uppercase tracking-widest text-on-surface-variant/60 mb-1"
+                >RSVP information</span
+              >
+              <button
+                class="mt-2 px-3 py-1.5 bg-surface-container-low border border-outline-variant text-on-surface-variant/60 text-[9px] font-bold uppercase tracking-widest rounded-full flex items-center justify-center gap-1.5 hover:bg-surface-container-high transition-colors mx-auto w-fit min-w-[100px]"
+              >
+                <span class="material-symbols-outlined text-[12px]"
+                  >verified_user</span
+                >
+                Required
+              </button>
+            </div>
+            <!-- Step 5 -->
+            <div class="flex flex-col items-center justify-center text-center">
+              <div
+                class="w-10 h-10 rounded-full bg-surface-container-low border-4 border-surface-container-lowest flex items-center justify-center mb-4 text-on-surface-variant/30"
+              >
+                <span class="material-symbols-outlined text-[18px]"
+                  >public</span
+                >
+              </div>
+              <span
+                class="text-[10px] uppercase tracking-widest text-on-surface-variant/60 mb-1"
+                >Website</span
+              >
+              <button
+                class="mt-2 px-3 py-1.5 bg-surface-container-low border border-outline-variant text-on-surface-variant/60 text-[9px] font-bold uppercase tracking-widest rounded-full flex items-center justify-center gap-1.5 hover:bg-surface-container-high transition-colors mx-auto w-fit min-w-[100px]"
+              >
+                <span class="material-symbols-outlined text-[12px]"
+                  >public</span
+                >
+                Required
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Send Messages-->
+      <section>
+        <div class="flex items-center justify-between mb-10">
+          <h3
+            class="text-[12px] uppercase tracking-[0.15em] text-on-surface font-bold"
+          >
+            Step 2: Messaging Workflow
+          </h3>
+        </div>
+        <div
+          class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm overflow-hidden"
+        >
+          <div class="divide-y divide-outline-variant/30">
+            <!-- Workflow Item 1: Save the Dates -->
+            <div
+              class="workflow-step p-10 flex gap-12 group hover:bg-surface-container-low transition-colors"
+            >
+              <div class="workflow-dot pt-2">
+                <div
+                  class="w-4 h-4 rounded-full border-2 border-outline-variant bg-white flex items-center justify-center group-hover:border-primary transition-colors"
+                >
+                  <div
+                    class="w-1.5 h-1.5 rounded-full bg-outline-variant group-hover:bg-primary transition-colors"
+                  ></div>
+                </div>
+              </div>
+              <div class="flex-1 flex flex-col md:flex-row gap-12 items-start">
+                <div class="w-full md:w-1/3">
+                  <div class="flex items-center gap-3 mb-2">
+                    <h4 class="font-display text-xl text-on-surface opacity-40">
+                      01. Save the Dates
+                    </h4>
+                    <span
+                      class="material-symbols-outlined text-[16px] text-outline/40"
+                      >lock</span
+                    >
+                  </div>
+                  <p class="text-on-surface-variant/60 leading-relaxed text-sm">
+                    Send the initial announcement to all guests once your date
+                    and design are ready.
+                  </p>
+                </div>
+                <div class="w-full md:w-1/3 space-y-3 pt-1">
+                  <p
+                    class="text-[9px] uppercase tracking-widest text-on-surface-variant/40 mb-1"
+                  >
+                    Requirements
+                  </p>
+                  <div class="flex flex-col gap-2">
+                    <div class="flex items-center justify-between text-[11px]">
+                      <span class="text-on-surface-variant/70">Add Guests</span>
+                      <span class="text-error/70 font-semibold italic"
+                        >Incomplete</span
+                      >
+                    </div>
+                    <div class="flex items-center justify-between text-[11px]">
+                      <span class="text-on-surface-variant/70"
+                        >Info Config</span
+                      >
+                      <span class="text-on-surface-variant/40 italic"
+                        >Pending</span
+                      >
+                    </div>
+                    <div class="flex items-center justify-between text-[11px]">
+                      <span class="text-on-surface-variant/70"
+                        >Design Finalized</span
+                      >
+                      <span class="text-on-surface-variant/40 italic"
+                        >Pending</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full md:w-1/3 flex flex-col gap-3 pt-1">
+                  <button
+                    class="px-6 py-2.5 border border-primary text-[10px] uppercase tracking-widest font-semibold text-primary hover:bg-primary hover:text-white transition-all rounded-lg flex items-center justify-center gap-2 w-full"
+                  >
+                    <span class="material-symbols-outlined text-[16px]"
+                      >visibility</span
+                    >
+                    Preview
+                  </button>
+                  <button
+                    class="px-8 py-2.5 bg-outline-variant text-on-surface-variant/40 text-[10px] uppercase tracking-widest font-semibold rounded-lg flex items-center justify-center gap-2 transition-all cursor-not-allowed w-full"
+                    data-stitch-orig-opacity="0"
+                  >
+                    &nbsp;Send Messages
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Workflow Item 2: RSVP Invitations -->
+            <div
+              class="workflow-step p-10 flex gap-12 group hover:bg-surface-container-low transition-colors"
+            >
+              <div class="workflow-dot pt-2">
+                <div
+                  class="w-4 h-4 rounded-full border-2 border-outline-variant bg-white flex items-center justify-center"
+                >
+                  <div
+                    class="w-1.5 h-1.5 rounded-full bg-outline-variant"
+                  ></div>
+                </div>
+              </div>
+              <div class="flex-1 flex flex-col md:flex-row gap-12 items-start">
+                <div class="w-full md:w-1/3">
+                  <div class="flex items-center gap-3 mb-2">
+                    <h4 class="font-display text-xl text-on-surface opacity-40">
+                      02. RSVP Invitations
+                    </h4>
+                    <span
+                      class="material-symbols-outlined text-[16px] text-outline/40"
+                      >lock</span
+                    >
+                  </div>
+                  <p class="text-on-surface-variant/60 leading-relaxed text-sm">
+                    Official invitations with RSVP links. Unlocks after website
+                    and setup details are complete.
+                  </p>
+                </div>
+                <div class="w-full md:w-1/3 space-y-3 pt-1">
+                  <p
+                    class="text-[9px] uppercase tracking-widest text-on-surface-variant/40 mb-1"
+                  >
+                    Requirements
+                  </p>
+                  <div class="flex flex-col gap-2">
+                    <div class="flex items-center justify-between text-[11px]">
+                      <span class="text-on-surface-variant/70">Add Guests</span>
+                      <span class="text-error/70 font-semibold italic"
+                        >Incomplete</span
+                      >
+                    </div>
+                    <div class="flex items-center justify-between text-[11px]">
+                      <span class="text-on-surface-variant/70"
+                        >RSVP Config</span
+                      >
+                      <span class="text-on-surface-variant/40 italic"
+                        >Pending</span
+                      >
+                    </div>
+                    <div class="flex items-center justify-between text-[11px]">
+                      <span class="text-on-surface-variant/70"
+                        >Website Live</span
+                      >
+                      <span class="text-on-surface-variant/40 italic"
+                        >Pending</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full md:w-1/3 flex flex-col gap-3 pt-1">
+                  <button
+                    class="px-6 py-2.5 border border-primary text-[10px] uppercase tracking-widest font-semibold text-primary hover:bg-primary hover:text-white transition-all rounded-lg flex items-center justify-center gap-2 w-full"
+                  >
+                    <span class="material-symbols-outlined text-[16px]"
+                      >visibility</span
+                    >
+                    Preview
+                  </button>
+                  <button
+                    class="px-8 py-2.5 bg-outline-variant text-on-surface-variant/40 text-[10px] uppercase tracking-widest font-semibold rounded-lg flex items-center justify-center gap-2 transition-all cursor-not-allowed w-full"
+                  >
+                    &nbsp;Send Messages
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Workflow Item 3: Confirmation -->
+            <div
+              class="workflow-step p-10 flex gap-12 group hover:bg-surface-container-low transition-colors"
+            >
+              <div class="workflow-dot pt-2">
+                <div
+                  class="w-4 h-4 rounded-full border-2 border-outline-variant bg-white flex items-center justify-center"
+                >
+                  <div
+                    class="w-1.5 h-1.5 rounded-full bg-outline-variant"
+                  ></div>
+                </div>
+              </div>
+              <div class="flex-1 flex flex-col md:flex-row gap-12 items-start">
+                <div class="w-full md:w-1/3">
+                  <div class="flex items-center gap-3 mb-2">
+                    <h4 class="font-display text-xl text-on-surface opacity-40">
+                      03. Confirmation
+                    </h4>
+                    <span
+                      class="material-symbols-outlined text-[16px] text-outline/40"
+                      >lock</span
+                    >
+                  </div>
+                  <p class="text-on-surface-variant/60 leading-relaxed text-sm">
+                    Automated messages sent to guests upon successful RSVP
+                    submission.
+                  </p>
+                </div>
+                <div class="w-full md:w-1/3 space-y-3 pt-1">
+                  <p
+                    class="text-[9px] uppercase tracking-widest text-on-surface-variant/40 mb-1"
+                  >
+                    Requirements
+                  </p>
+                  <div class="flex flex-col gap-2">
+                    <div class="flex items-center justify-between text-[11px]">
+                      <span class="text-on-surface-variant/70">Add Guests</span>
+                      <span class="text-error/70 font-semibold italic"
+                        >Incomplete</span
+                      >
+                    </div>
+                    <div class="flex items-center justify-between text-[11px]">
+                      <span class="text-on-surface-variant/70"
+                        >RSVP System Active</span
+                      >
+                      <span class="text-on-surface-variant/40 italic"
+                        >Pending</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full md:w-1/3 flex flex-col gap-3 pt-1">
+                  <button
+                    class="px-6 py-2.5 border border-primary text-[10px] uppercase tracking-widest font-semibold text-primary hover:bg-primary hover:text-white transition-all rounded-lg flex items-center justify-center gap-2 w-full"
+                  >
+                    <span class="material-symbols-outlined text-[16px]"
+                      >visibility</span
+                    >
+                    Preview
+                  </button>
+                  <button
+                    class="px-8 py-2.5 bg-outline-variant text-on-surface-variant/40 text-[10px] uppercase tracking-widest font-semibold rounded-lg flex items-center justify-center gap-2 transition-all cursor-not-allowed w-full"
+                  >
+                    &nbsp;Send Messages&nbsp;
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Footer -->
+      <section class="mt-24 pt-12 border-t border-outline-variant">
+        <div class="flex items-center justify-between mb-10">
+          <h3
+            class="text-[12px] uppercase tracking-[0.15em] text-on-surface font-bold"
+          >
+            Guest Tracker
+          </h3>
+        </div>
+        <div
+          class="bg-surface-container-lowest rounded-xl border border-outline-variant p-20 flex flex-col items-center justify-center text-center shadow-sm"
+        >
+          <div
+            class="w-16 h-16 rounded-full bg-surface-container-low flex items-center justify-center mb-6 text-on-surface-variant/30"
+          >
+            <span class="material-symbols-outlined text-[32px]">person</span>
+          </div>
+          <h4 class="font-display text-2xl text-on-surface mb-2">
+            No guests found
+          </h4>
+          <p class="text-on-surface-variant/60 max-w-xs mx-auto text-sm">
+            Add your first guest to get started and unlock automated messaging
+            workflows.
+          </p>
+        </div>
+      </section>
+    </main>
+    <!-- Support Floating Action -->
+    <div class="fixed bottom-10 right-10 z-[100]">
+      <button
+        class="flex items-center gap-3 bg-primary text-white pl-5 pr-6 py-3.5 rounded-full shadow-2xl hover:shadow-primary/20 transition-all duration-300 group font-bold"
+      >
+        <span
+          class="material-symbols-outlined text-[20px]"
+          style="font-variation-settings: &quot;FILL&quot; 1"
+          >auto_awesome</span
+        >
+        <span class="text-[11px] uppercase tracking-widest"
+          >Concierge Support</span
+        >
+      </button>
     </div>
-    <h4 class="font-display text-2xl text-on-surface mb-2">No guests found</h4>
-    <p class="text-on-surface-variant/60 max-w-xs mx-auto text-sm">Add your first guest to get started and unlock automated messaging workflows.</p>
-    
-  </div>
-  
-</section>
-</main>
-<!-- Support Floating Action -->
-<div class="fixed bottom-10 right-10 z-[100]">
-<button class="flex items-center gap-3 bg-primary text-white pl-5 pr-6 py-3.5 rounded-full shadow-2xl hover:shadow-primary/20 transition-all duration-300 group font-bold">
-<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: &quot;FILL&quot; 1;">auto_awesome</span>
-<span class="text-[11px] uppercase tracking-widest">Concierge Support</span>
-</button>
-</div>
 
+    ```
 
-```
-
-<div id="snapdom-sandbox" data-snapdom-sandbox="true" aria-hidden="true" style="position: absolute; left: -9999px; top: -9999px; width: 0px; height: 0px; overflow: hidden;"></div>
-
-</body></html>
+    <div
+      id="snapdom-sandbox"
+      data-snapdom-sandbox="true"
+      aria-hidden="true"
+      style="
+        position: absolute;
+        left: -9999px;
+        top: -9999px;
+        width: 0px;
+        height: 0px;
+        overflow: hidden;
+      "
+    ></div>
+  </body>
+</html>
